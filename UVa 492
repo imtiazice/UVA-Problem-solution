@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+	char ch, l;
+	
+	while(scanf("%c", &ch)==1)
+	{
+		if(isalpha(ch))
+		{
+			if(ch== 'A'|| ch== 'E'|| ch== 'I' || ch== 'O' || ch== 'U'|| ch== 'a' || ch== 'e' || ch== 'i' || ch== 'o' || ch== 'u' )
+			{
+				while(isalpha(ch))
+				{
+					putchar(ch);
+					ch = getchar();
+				}
+				printf("ay");
+			}
+			
+			else
+			{
+				l = ch;
+				ch = getchar();
+				
+				while(isalpha(ch))
+				{
+					putchar(ch);
+					ch = getchar();
+				}
+				printf("%cay", l);
+			}
+		}
+		putchar(ch);
+	}
+	return 0;
+}
